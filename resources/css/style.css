@@ -1,13 +1,17 @@
 @charset "UTF-8";
 
+body {
+    background: rgba(240, 231, 231, 0.856);
+}
+
 body, input, button {
     font-family: "Roboto", "sans-serif";
 }
 
 header {
-    width:100%;
+    width:100%; /*Takes place of entire browser windox size*/
     height:80px;
-    position: fixed;
+    position: fixed; /*Remains on the top part of the screen*/
     padding: 5px;
     z-index: 5;
     top: 0;
@@ -21,11 +25,12 @@ header {
 header input {
     width: 100%;
     height: 50px;
-    float: left;
+    float: right;
     color: #fff;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: normal;
     text-indent: 20px;
+    padding: 0px 0px 0px 0px; 
     background: rgba(255, 255, 255, 0.2);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -42,7 +47,50 @@ header input {
     -o-appearance: none;
 }
 
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
+    border-radius: 25px;
+    background: #fff;
+    border: 0px;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ns-appearance: none;
+    -o-appearance: none;
+}
+
+header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+    fill: #25b99a;
+}
+
 /*Add header input style here */
 header input::-webkit-input-placeholder {
-    color:rgba(255, 255, 255, 0.9);
+    color:rgba(255, 255, 255, 0.75);
+}
+header input::-moz-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
+}
+header input::-ns-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
+}
+header input::-o-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
 }
