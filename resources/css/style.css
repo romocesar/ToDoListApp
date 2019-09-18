@@ -2,6 +2,7 @@
 
 body {
     background: rgba(240, 231, 231, 0.856);
+    padding: 60px 0 0 0;
 }
 
 body, input, button {
@@ -10,7 +11,7 @@ body, input, button {
 
 header {
     width:100%; /*Takes place of entire browser windox size*/
-    height:80px;
+    height:60px;
     position: fixed; /*Remains on the top part of the screen*/
     padding: 5px;
     z-index: 5;
@@ -79,6 +80,29 @@ header button svg {
 
 header button svg .fill {
     fill: #25b99a;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    float: left;
+}
+
+ul.todo {
+    width: 100%;
+    float: left;
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul.todo li{
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow:0px 2px 4px rgba(44, 62, 80, 0.15);
 }
 
 /*Add header input style here */
