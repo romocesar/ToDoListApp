@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 body {
+    padding: 80px 0 0 0;
     background: rgba(240, 231, 231, 0.856);
-    padding: 60px 0 0 0;
 }
 
 body, input, button {
@@ -11,37 +11,40 @@ body, input, button {
 
 .nofill {
     fill: none;
+    /* background-color: #ffffff; */
 }
 
 header {
     width:100%; /*Takes place of entire browser windox size*/
     height:60px;
-    position: fixed; /*Remains on the top part of the screen*/
     padding: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    position: fixed; /*Remains on the top part of the screen*/
     z-index: 5;
     top: 0;
     left: 0;
     background:#25b99a;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
     box-shadow:0px 2px 4px rgba(44, 62, 80, 0.15);
 }
 
 header input {
     width: 100%;
     height: 50px;
+    padding: 0px 0px 0px 0px;
+    border: 0px;
+
     float: right;
     color: #fff;
     font-size: 15px;
     font-weight: normal;
-    text-indent: 20px;
-    padding: 0px 0px 0px 0px; 
+    text-indent: 20px; 
     background: rgba(255, 255, 255, 0.2);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px; 
-    border: 0px;
     box-shadow: none;
     outline: none;
 
@@ -94,14 +97,16 @@ header button svg .fill {
 
 ul.todo {
     width: 100%;
+    /* padding: 0px; */
+
     float: left;
     list-style-type: none;
-    padding: 0px;
 }
 
 ul.todo li{
     width: 100%;
-    height: 50px;
+    min-height: 50px;
+
     margin: 0 0 10px 0;
     padding: 14px 100px 14px 14px;
     border-radius: 5px;
@@ -109,6 +114,7 @@ ul.todo li{
     line-height: 22px;
     font-size: 14px;
     font-weight: 500;/*Sets the boldness of the font if font has different variations*/
+    word-break: break-word;
     color: #444;
     float: left;
     background: #fff;
@@ -124,6 +130,7 @@ ul.todo li:last-of-type {
 ul.todo li .buttons{
     width: 100px;
     height: 50px;
+
     position: absolute;
     top: 0;
     right: 0;
@@ -133,16 +140,18 @@ ul.todo li .buttons{
 ul.todo li .buttons button{
     width: 50px;
     height: 50px;
-    float: left;
-    appearance: none;
-    background: none;
     border: 0px;
+
+    float: left;
+    background: none;
     box-shadow: none;
     outline: none;
     position: relative;
+    cursor: pointer;
+
     -webkit-appearance: none;
     -moz-appearance: none;
-    -ns-appearance: none;
+    /* -ns-appearance: none; */
     -o-appearance: none;
 }
 
@@ -159,13 +168,21 @@ ul.todo li .buttons button:last-of-type:before {
 ul.todo li .buttons button svg{
     width: 22px;
     height: 22px;
+    margin: -11px 0 0 -11px;
+
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -11px 0 0 -11px;
+
 }
 
+ul.todo li .buttons button.eraseItem svg .fill{
+    fill: #c0cecb;  
+}
 
+ul.todo li .buttons button.eraseItem:hover svg .fill{
+    fill: #f01a1ad0;  
+}
 /*Add header input style here */
 header input::-webkit-input-placeholder {
     color:rgba(255, 255, 255, 0.75);
