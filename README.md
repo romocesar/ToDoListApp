@@ -18,4 +18,4 @@ git clone this repository to create a website of yours based on my own.
 
 - Desktop version v1.0.0
 
-![Desktop Screenshot #1](design/Screenshot_main_1.JPEG)
+![Desktop Screenshot #1](design/Screenshot_main_1.jpeg)
